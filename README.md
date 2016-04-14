@@ -16,4 +16,9 @@ It works but isn't best.
 - 2.67\_int-size-is-32
 - 2.68\_lower-bits
 - 2.69\_rotate-right
+- 2.70\_fits-bits
+- 2.71\_extract-byte
+- 2.72\_copy-int
+- 2.73\_saturating-add
+- 2.74\_subtract-overflow
 
