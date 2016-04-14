@@ -9,8 +9,8 @@ bool judge_int( int x )
 	// from A to D
 	return ( !( x ^ ~0 ) )
 		|| ( !x )
-		|| ( !( ( x << ( ( sizeof(int) - 1 ) * 8 ) ) ^ ~0 ) )
-		|| ( !( x << ( ( sizeof(int) - 1 ) * 8 ) ) );
+		|| ( !( ( x << ( ( sizeof(int) - 1 ) << 3 ) ) ^ ~0 ) )
+		|| ( !( x << ( ( sizeof(int) - 1 ) << 3 ) ) );
 
 }
 

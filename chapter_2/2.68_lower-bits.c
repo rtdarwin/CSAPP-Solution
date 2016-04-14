@@ -9,7 +9,7 @@
 int lower_bits( int x, int n )
 {
 	int result = ~0;
-	int n_equals_w = !( n ^ (sizeof(int) * 8) );
+	int n_equals_w = !( n ^ (sizeof(int) << 3 ) );
 	// If not n equals n, then result = ...
 	n_equals_w || ( result = x | ( ( 1 << n ) - 1 ) );
 

@@ -14,7 +14,7 @@ unsigned rotate_right( unsigned x, int n )
 	// Logical right shift
 	x >>= n;
 	// Recover, Here `value computed is not used` results a warning.
-	!n || (x |= ( right << ( sizeof(unsigned)*8 - n ) ) );
+	!n || (x |= ( right << ( ( sizeof(unsigned) << 3 ) - n ) ) );
 
 	return x;
 }
