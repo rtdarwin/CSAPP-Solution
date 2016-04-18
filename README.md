@@ -2,9 +2,18 @@
 
 Personal solution for CSAPP 2nd edition.
 
-It works but isn't best.
+It works but is not the best.
+
+## Documentation
+Each chpater has a TeX source file written in Chinese to document that chapter.
+it consists of all the c source files it annotates to make a more convinent
+way for reading.
+
+If you want to compile the TeX source file for yourself, you need XeLaTeX engine.
 
 ## Uploaded
+
+### Chapter 2
 - 2.55\_show-byte
 - 2.58\_test-endian
 - 2.59\_combine-words
