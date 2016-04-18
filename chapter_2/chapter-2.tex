@@ -1,0 +1,53 @@
+\documentclass[ a4paper, 10pt ]{article}
+
+\usepackage{fullpage}
+\usepackage{abstract}
+\usepackage{color}
+\definecolor{nicered}{rgb}{0.8,0.2,0.1}
+\usepackage{graphicx}
+\usepackage[
+	CJKmath=true
+]{xeCJK}
+
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{Latin Modern Sans}
+\setmonofont{DejaVu Sans Mono}
+\setCJKmainfont{FandolSong}
+\setCJKsansfont{FandolHei}
+\setCJKmonofont{FandolKai}
+
+\usepackage[
+  bookmarks = true,
+  CJKbookmarks = true,
+  colorlinks = true,
+  linkcolor = nicered
+]{hyperref}
+
+\parskip=4pt
+\linespread{1.2}
+\newcommand{\answer}[2]{\textcolor{nicered}{\subsection*{#1 #2}}
+			\addcontentsline{toc}{subsection}{#1}}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%  \rule{\textwidth}{.5pt}    <-- used for a separation
+%  \textcolor{<name>}{<text>} <-- used for colored text
+%  \includegraphics*[ key-val list ]{<file>      
+%        <--- include a images.( no need to add file extension )
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\begin{document}
+\title{CSAPP Chapter 2}
+\author{Robert T. Darwin}
+\maketitle
+\begin{abstract}
+	这篇文档记录我在学习CSAPP第二章时候的感悟, 
+	其后也附上部分习题的个人解答. 
+	供同学者参考,也备我以后查阅.
+\end{abstract}
+\tableofcontents
+\newpage
+
+\section{学习笔记}
+
+\section{部分习题答案}
+
+\end{document}
