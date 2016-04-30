@@ -24,7 +24,7 @@
 ]{hyperref}
 
 \parskip=4pt
-\linespread{1.2}
+\linespread{1.4}
 \newcommand{\answer}[2]{\textcolor{nicered}{\subsection*{#1 #2}}
 			\addcontentsline{toc}{subsection}{#1}}
 
@@ -46,7 +46,66 @@
 \tableofcontents
 \newpage
 
+% 1
 \section{学习笔记}
+
+% 1-1
+\subsection{整体上看讲了什么}
+第二章讲的其实是C语言整数算术运算的通用约定(不是规范也不是规定), 以及IEEE 754标准.
+
+\textbf{整数}. 
+在C语言的规范 ISO/IEC 9989:1999 以及 The C Programming Language 中
+其实并没有规定C的整数运算要遵循怎样的性质, 例如溢出时要不要保证符号等.
+按照CSAPP所说, 省去这些硬性规定是为了使得保证C语言能够在更大范围的不同机器上实现.
+但没有统一规定的现状导致了大多数讲解C语言的书籍并没有将这部分内容纳入书本范围.
+CSAPP恰好弥补了这一空白.
+
+\textbf{浮点数}. 
+浮点数的运算主要就是对 IEEE Std 754 以及 ISO/IEC/IEEE 60559 的解读\\
+下面是 Wikipedia 对 IEEE754 和 IOS/IEC/IEEE60559 的解释: 
+
+\small
+The IEEE Standard for Floating-Point Arithmetic (IEEE 754) is a technical standard for floating-point computation established in 1985 by the Institute of Electrical and Electronics Engineers (IEEE). Many hardware floating point units use the IEEE 754 standard. The standard addressed many problems found in the diverse floating point implementations that made them difficult to use reliably and portably. The current version, IEEE 754-2008 published in August 2008, includes nearly all of the original IEEE 754-1985 standard and the IEEE Standard for Radix-Independent Floating-Point Arithmetic (IEEE 854-1987). The international standard ISO/IEC/IEEE 60559:2011 (with content identical to IEEE 754-2008) has been approved for adoption through JTC1/SC 25 under the ISO/IEEE PSDO Agreement[1] and published.[2]
+\normalsize
+
+% 1-2
+\subsection{重点在哪里}
+
+CSAPP 对于整数运算的讲解还是比较清楚的(相比于一些国内计算机组成原理书籍).
+其中有些概念是隐含于书中的, 需要着重提一下:
+
+\begin{enumerate}
+
+\item \textbf{接口与实现}.
+我们可以将整数运算方面内容分为接口和实现两部分:
+\begin{itemize}
+
+\item 接口是我们与之打交道的地方
+通过这个接口我们可以了解它的运算性质并依照这个性质来进行应用级乃至系统级的编程都是没问题的.
+
+\item 实现是内部的细节. 分为ISA层和提供ISA层的XXXX体系结构层, 
+分别对应 a) 编译器如何将算术运算转为汇编代码, 比如 $5+8$ 是使用addu还是addi指令,
+b) 和CPU内部怎样用一些寄存器和运算器实现这个运算, 比如 $5*8$是使用两个64的寄存器, 
+一个用来放置其中乘数, 一个用来放置累加的结果, 还是说使用一个64位的寄存器, 
+其中一部分用来放置累加的结果, 一部分用来放置其中一个乘数.
+\end{itemize}
+
+对于整数算术运算接口和实现的学习方式, 我的建议是在了解C语言提供给我们的接口的同时也要了解
+其内部实现方式, 如\it{Computer System: from gates XXXX to C and beyond} 中所说 XXXX.
+不过限于ISA层就可以了, 再往下深入效果甚微.
+
+\item \textbf{对于运算符的定义要搞清楚}.
+由于我学习XXXX群论不精, 这里就通俗的讲.
+在书本中出现了以下运算符号
+\begin{displaymath}
+	+^{t}_{w}, +^{u}_{w}, -^{t}_{w}, -^{u}_{w}, *^{t}_{w}, *^{u}_{w}\\
+	+, -, *, /
+\end{displaymath}
+这种形式化使用的符号是本书的亮点之一, 也是分清楚平常使用的运算和无符号数运算, 补码运算的
+核心.
+
+\end{enumerate}
+
 
 \section{部分习题答案}
 
