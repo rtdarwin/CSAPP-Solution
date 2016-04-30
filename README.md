@@ -30,4 +30,6 @@ If you want to compile the TeX source file for yourself, you need XeLaTeX engine
 - 2.72\_copy-int
 - 2.73\_saturating-add
 - 2.74\_subtract-overflow
-
+- 2.75\_unsigned-high-prod
+- 2.77\_divide-power2
+- 2.78\_mul5div8
