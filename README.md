@@ -4,12 +4,6 @@ Personal solution for CSAPP 2nd edition.
 
 It works but is not the best.
 
-## Documentation
-Each chpater has a TeX source file written in Chinese to document that chapter.
-it consists of all the c source files it annotates to make a more convinent
-way for reading.
-
-If you want to compile the TeX source file for yourself, you need XeLaTeX engine.
 
 ## Uploaded
 
