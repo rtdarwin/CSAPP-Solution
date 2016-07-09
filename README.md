@@ -27,3 +27,7 @@ It works but is not the best.
 - 2.75\_unsigned-high-prod
 - 2.77\_divide-power2
 - 2.78\_mul5div8
+- 2.79\_fiveeights
+- 2.91\_float-absval
+- 2.93\_float-half
+- 2.94\_float-twice
